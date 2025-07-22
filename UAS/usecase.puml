@@ -1,0 +1,15 @@
+@startuml
+actor Admin
+
+rectangle "Sistem Toko Elektronik" {
+  Admin --> (Login)
+  Admin --> (Kelola Produk)
+  Admin --> (Input Transaksi Penjualan)
+  Admin --> (Lihat Laporan Penjualan)
+  Admin --> (Lihat Laporan Stok)
+  (Kelola Produk) --> (Tambah Produk)
+  (Kelola Produk) --> (Edit Produk)
+  (Kelola Produk) --> (Hapus Produk)
+}
+
+@enduml

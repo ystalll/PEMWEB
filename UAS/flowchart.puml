@@ -1,0 +1,31 @@
+@startuml
+start
+
+:Login sebagai Admin;
+
+if (Login berhasil?) then (Ya)
+  :Tampilkan Menu Utama;
+  
+  repeat
+    :Pilih Menu;
+    if (Kelola Produk?) then (Ya)
+      :Tambah/Edit/Hapus Produk;
+    elseif (Input Transaksi?) then (Ya)
+      :Pilih Produk;
+      :Masukkan Jumlah;
+      :Hitung Total;
+      :Cetak Nota;
+      :Update Stok;
+    elseif (Lihat Laporan?) then (Ya)
+      :Pilih Jenis Laporan;
+      :Tampilkan Laporan;
+    endif
+  repeat while (Ingin melakukan aktivitas lain?)
+
+  :Logout;
+else (Tidak)
+  :Tampilkan Pesan Error;
+endif
+
+stop
+@enduml
